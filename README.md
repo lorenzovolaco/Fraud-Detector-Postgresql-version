@@ -1,45 +1,32 @@
-Fraud Detection with Graph Neural Networks (GNN) + PostgreSQL
 
-Projeto de detecção de fraudes em redes financeiras utilizando Graph Neural Networks (GCN), com dados extraídos diretamente de um banco PostgreSQL.
+raud Detection with Graph Neural Networks (GNN) + PostgreSQL
 
-📌 Visão geral
+Este projeto realiza detecção de fraudes em redes financeiras utilizando Graph Neural Networks (GCN) 🧠🔗, modelando transações bancárias como um grafo para capturar relações complexas entre contas.
 
-Este sistema modela transações financeiras como um grafo, onde:
+📊 Como funciona o sistema:
 
-Nós representam contas
-Arestas representam transações
-Um modelo GNN aprende padrões de comportamento suspeito
-⚙️ Pipeline
-Extração de dados (SQL / PostgreSQL)
-Contas e transações são carregadas diretamente do banco.
-Construção do grafo
-Conversão dos dados para estrutura compatível com PyTorch Geometric.
-Feature engineering
-Adição de métricas estruturais (ex: PageRank).
-Treinamento do modelo
-GCN aprende a classificar nós como:
-Normal (0)
-Fraude (1)
-Visualização
-Grafo final com previsões do modelo.
-🧠 Tecnologias
-Python
-PyTorch
-PyTorch Geometric
-PostgreSQL (psycopg)
-NetworkX
-NumPy
-Matplotlib
-Scikit-learn
-📦 Instalação
-pip install torch torch-geometric networkx numpy matplotlib scikit-learn psycopg
-🚀 Execução
+🗄️ Dados são extraídos diretamente de um banco PostgreSQL
+🔵 Nós representam contas bancárias
+🔗 Arestas representam transações financeiras
+📈 Features estruturais (como PageRank) são adicionadas ao grafo
+🧠 Um modelo GCN é treinado para identificar padrões de fraude
 
-Configure as credenciais do PostgreSQL no código e execute:
+⚙️ Pipeline do projeto:
 
-python main.py
-📊 Saída do modelo
+📥 Extração de dados via SQL (PostgreSQL)
+🕸️ Construção do grafo com NetworkX / PyTorch Geometric
+🧪 Feature engineering (PageRank e métricas estruturais)
+🤖 Treinamento do modelo GNN (classificação binária)
+📊 Avaliação com F1-score
+🎨 Visualização do grafo com predições
+
+🎯 Classes do modelo:
+
 🔵 Classe 0 → Conta normal
 🔴 Classe 1 → Fraude
-Métrica de avaliação: F1-score
-Visualização do grafo com predições
+
+🛠️ Tecnologias utilizadas:
+Python 🐍 | PyTorch 🔥 | PyTorch Geometric 🧠 | PostgreSQL 🗄️ | psycopg | NetworkX 🔗 | NumPy ➗ | Matplotlib 📊 | Scikit-learn 🤖
+
+📈 Resultado final:
+O sistema gera uma visualização do grafo com as predições do modelo, facilitando a identificação de comportamentos suspeitos na rede financeira.
