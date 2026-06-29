@@ -23,7 +23,7 @@ def load_financial_data_from_postgres():
     cursor = conn.cursor()
 
     # roda a query para puxar os nos (contas), suas features e a classe alvo
-    cursor.execute("SELECT account_id, feat_1, feat_2, feat_3, is_fraud FROM accounts;")
+    cursor.execute("SELECT account_id, feat_1, feat_2, feat_3, fraude FROM accounts;")
     nodes_raw = cursor.fetchall()
     
     # mapeia os ids reais do postgres para indices de 0 a n-1 exigidos pela gnn
