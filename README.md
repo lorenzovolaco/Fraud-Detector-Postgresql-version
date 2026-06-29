@@ -1,5 +1,4 @@
-
-raud Detection with Graph Neural Networks (GNN) + PostgreSQL
+Fraud Detection with Graph Neural Networks (GNN) + PostgreSQL
 
 Este projeto realiza detecção de fraudes em redes financeiras utilizando Graph Neural Networks (GCN) 🧠🔗, modelando transações bancárias como um grafo para capturar relações complexas entre contas.
 
